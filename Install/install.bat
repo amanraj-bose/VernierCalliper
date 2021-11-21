@@ -8,5 +8,5 @@ python --version
 g++
 python espeak.py
 cls
-C:\Users\AMAN\Documents\GitHub\Vernier_Calliper\Install_Exe\setup_espeak-1.48.04
+setup_espeak-1.48.04
 exit
