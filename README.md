@@ -21,16 +21,30 @@
 <hr>
 <br>
 <p style="color: aqua">Other Method</p>
-<b style="color: red"> `Download Git of This link :-` <a href="https://git.scm/download/" style="color: green">https://git.scm/download/</a></b>
+<b style="color: red"> `Download Git of This link :-` <a href="https://git-scm.com/download/win" style="color: green">https://git-scm.com/download/win/</a></b>
 <hr>
 <hr>
 <br>
-<b>Step 1:</b> `cd Desktop`
-<b>Step 2:</b> `git clone https://github.com/amanraj-bose/VC.git`
+<b>Step 1:</b>
+
+`cd Desktop`
+
+<b>Step 2:</b> 
+
+`git clone https://github.com/amanraj-bose/VC.git`
+
 <br>
 <hr>
 <br>
 ### LINUX
-<b>Step 1:</b> `cd Desktop/`
-<b>Step 2:</b> `sudo apt install git`
-<b>Step 3:</b> `git clone https://github.com/amanraj-bose/VC.git`
+<b>Step 1:</b> 
+
+`cd Desktop/`
+
+<b>Step 2:</b> 
+
+`sudo apt install git`
+
+<b>Step 3:</b> 
+
+`git clone https://github.com/amanraj-bose/VC.git`
