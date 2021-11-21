@@ -1,0 +1,7 @@
+.vscode
+.idea
+__pycache__
+CMakeLists.txt
+desktop.ini
+Default.rdp
+cmake-build-debug
