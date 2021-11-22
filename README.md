@@ -17,7 +17,7 @@
 <br>
 ### WINDOW'S
 
-<b style="color: green">`Install using Zip File And Extract It.`</b>
+<b style="color: green">Install using Zip File And Extract It.</b>
 <hr>
 <br>
 <p style="color: aqua">Other Method</p>
@@ -31,7 +31,7 @@
 
 <b>Step 2:</b> 
 
-`git clone https://github.com/amanraj-bose/VC.git`
+`git clone https://github.com/amanraj-bose/VernierCalliper.git`
 
 <br>
 <hr>
@@ -41,10 +41,53 @@
 
 `cd Desktop/`
 
-<b>Step 2:</b> 
+<b> Step 2: </b>
 
-`sudo apt install git`
+`cd VernierCalliper\Install\`
 
 <b>Step 3:</b> 
 
-`git clone https://github.com/amanraj-bose/VC.git`
+`sudo apt install git`
+
+<b>Step 4:</b> 
+
+`git clone https://github.com/amanraj-bose/VernierCalliper.git`
+
+<hr>
+<hr>
+<br>
+**TERMUX**
+<br>
+<br>
+
+<b> MAIN </b>
+
+`cd VernierCalliper\Install\`
+
+<br>
+<br>
+<b> STEP 1: </b>
+
+`apt install git`
+
+<b> STEP 2: </b>
+
+`git clone https://github.com/amanraj-bose/VernierCalliper.git`
+
+<b> STEP 3: </b>
+
+`chmod +x install_Termux.sh`
+
+<b> STEP 4: </b>
+
+`./install_Termux.sh`
+
+<b style="color:#238636;"> if you are install c++ in termux </b>
+
+<b> STEP 1: </b>
+
+`chmod +x install_Termux-c++.sh`
+
+<b> STEP 2: </b>
+
+`./install_Termux-c++.sh`
