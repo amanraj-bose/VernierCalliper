@@ -53,18 +53,20 @@
 
 `cd Desktop/`
 
-<b> Step 2: </b>
-
-`cd VernierCalliper\Install\`
-
-<b>Step 3:</b> 
+<b>Step 2:</b> 
 
 `sudo apt install git`
 
-<b>Step 4:</b> 
+<b>Step 3:</b> 
 
 `git clone https://github.com/amanraj-bose/VernierCalliper.git`
 
+<b> Step 4: </b>
+
+`cd VernierCalliper\Install\`
+
+
+<br>
 <hr>
 <hr>
 <br>
