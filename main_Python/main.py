@@ -1,3 +1,7 @@
+# utf 8
+# Author : Aman Raj
+# PROGRAM : PHYSIC'S
+
 import math
 import requests
 import pyttsx3
