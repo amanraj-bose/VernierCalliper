@@ -8,9 +8,9 @@
 <br>
 **Particular Software For WINDOWS DOWNLOAD**
  
- `Espeak` :- <a href="https://sourceforge.net/projects/espeak/">https://sourceforge.net/projects/espeak/ </a>
+ `Espeak for speaking c++ program` :- <a href="https://sourceforge.net/projects/espeak/">https://sourceforge.net/projects/espeak/ </a>
  
- `Python` :- <a href="https://www.python.org/downloads/release/python-396/">https://www.python.org/downloads/release/python-396/ </a>
+ `Python 3.9.6` :- <a href="https://www.python.org/downloads/release/python-396/">https://www.python.org/downloads/release/python-396/ </a>
  
  `Compile C/C++` :- <a href="https://sourceforge.net/projects/mingw-w64/">https://sourceforge.net/projects/mingw-w64/</a>
  
