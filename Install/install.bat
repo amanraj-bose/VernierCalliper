@@ -7,8 +7,8 @@ pip install math
 pip install pyinstaller
 pip uninstall typing
 pyinstaller --onefile main_Windows.py
+pip install typing
 python --version
 g++
-python espeak.py
 cls
 exit
