@@ -8,5 +8,4 @@ python --version
 g++
 python espeak.py
 cls
-setup_espeak-1.48.04
 exit
