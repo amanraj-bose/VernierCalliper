@@ -3,6 +3,9 @@
 # PROGRAM : PHYSIC'S
 
 import math
+from collections import Counter
+import random
+
 
 
 #           pyttsx3 initiliaze
@@ -24,6 +27,7 @@ def Intro():
     print("[\033[91m\033[97m01\033[91m]" + Color.blue + " Zero Error \t" + Color.red)
     print("[\033[91m\033[97m02\033[91m]" + Color.blue + " VC \t" + Color.red)
     print("[\033[91m\033[97m03\033[91m]" + Color.blue + " VernierCalliper \t" + Color.red)
+    print("[\033[91m\033[97m04\033[91m]" + Color.blue + " Histogram \t" + Color.red)
     print("[\033[91m\033[97m00\033[91m]" + Color.blue + " Help \t" + Color.red)
     print("[\033[91m\033[97m999\033[91m]" + Color.blue + " Exit \t" + Color.red)
     print(Color.white)
@@ -172,7 +176,7 @@ def OrdinaryVernierScale(n, m, Division, MSR):
     VSR = float(Result * Division)
     Reading_Final = float(MSR + VSR)
     
-    return Reading_Final + Color.magenta
+    return Reading_Final
 def ZeroError(n, m, Division, MSR):
     
     step_1 = float(n - m)
@@ -181,7 +185,20 @@ def ZeroError(n, m, Division, MSR):
     VSR = float(Result * Division)
     Reading_Final = float(MSR + VSR)
     Error_Final = float(Reading_Final - Zero_Error)
-    return Error_Final + Color.yellow
+    return Error_Final
+    
+def count(seq) -> dict:
+    hist = {}
+    for i in seq:
+        hist[i] = hist.get(i, 0) + 1
+    return hist
+
+def ascii_histogram(seq) -> None:
+    counted = count(seq)
+    for k in sorted(counted):
+        print(f'{k} {"+" * counted[k]}')
+        
+    
 Intro()
 commands = str(input("[\033[91m\033[97m-\033[91m]" + Color.green + "Select an Option : " + Color.white))
 print("\n")
@@ -206,6 +223,17 @@ elif commands == "02": #VC
     Main = VernierScale(N, M, multiple, divide, msr)
     
     print(f"Your Result is {Main}")
+elif commands == "04":
+    random.seed(1)
+    vals = list( map( float, input( "X => ").split( "," ) ) )
+    freq = [random.randint(5, 50) for _ in vals]
+
+    data = []
+
+    for f, v in zip(freq, vals):
+        data.extend([v] * f)
+    print(Color.magenta)
+    ascii_histogram(data)
 
 elif commands == "999":
     print(Color.red + "Exit")
