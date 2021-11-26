@@ -9,7 +9,7 @@ from tkinter import *
 from time import strftime, time
 from tkinter.ttk import *
 import matplotlib.pyplot as pt
-
+import os
 
 #           pyttsx3 initiliaze
 engine = pyttsx3.init()
@@ -18,6 +18,8 @@ engine.setProperty('voice', voices[0].id)
 engine.setProperty('rate', 177)
 
 #   Introduction
+def clean():
+    os.system("clear")
 def Intro():
     Name = """
      __     __              _              ____      _ _ _
@@ -364,6 +366,7 @@ def ZeroError(n, m, Division, MSR):
     Reading_Final = float(MSR + VSR)
     Error_Final = float(Reading_Final - Zero_Error)
     return Error_Final + Color.yellow
+clean()
 Intro()
 commands = str(input("[\033[91m\033[97m-\033[91m]" + Color.green + "Select an Option : " + Color.white))
 print("\n")
