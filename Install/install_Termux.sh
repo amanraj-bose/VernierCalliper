@@ -3,6 +3,8 @@
 clear
 apt install python3
 pip3 install math
+pip3 install random
+pip3 install collections
 pip3 install requests
 apt install figlet -y
 apt install ruby -y
