@@ -8,6 +8,7 @@ pip install pyinstaller
 pip uninstall typing
 pyinstaller --onefile main_Windows.py
 pip install typing
+pip install matplotlib
 python --version
 g++
 cls
