@@ -5,6 +5,7 @@
 import math
 from collections import Counter
 import random
+import os
 
 
 
@@ -57,7 +58,8 @@ class Other:
     print(Color.cyan)
     Pi = "The Pi value is : ", math.pi
     tan = "The Tau Value is : ", math.tau
-
+def clean():
+    os.system("clear")
 
     """
                                 // INTRODUCTION
