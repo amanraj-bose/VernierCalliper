@@ -8,17 +8,19 @@ import pyttsx3
 from tkinter import *
 from time import strftime, time
 from tkinter.ttk import *
+import matplotlib.pyplot as pt
 
 
 #           pyttsx3 initiliaze
-engine = pyttsx3.init()
+engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[0].id)
+engine.setProperty('voice', voices[1].id)
 engine.setProperty('rate', 177)
 
 #   Introduction
 def Intro():
     Name = """
+    
      __     __              _              ____      _ _ _
      \ \   / /__ _ __ _ __ (_) ___ _ __   / ___|__ _| | (_)_ __   ___ _ __
       \ \ / / _ \ '__| '_ \| |/ _ \ '__| | |   / _` | | | | '_ \ / _ \ '__|
@@ -33,6 +35,7 @@ def Intro():
     print("[\033[91m\033[97m01\033[91m]" + Color.blue + " Zero Error \t" + Color.red)
     print("[\033[91m\033[97m02\033[91m]" + Color.blue + " VC \t" + Color.red)
     print("[\033[91m\033[97m03\033[91m]" + Color.blue + " VernierCalliper \t" + Color.red)
+    print("[\033[91m\033[97m04\033[91m]" + Color.blue + " Histogram \t" + Color.red)
     print("[\033[91m\033[97m00\033[91m]" + Color.blue + " Help \t" + Color.red)
     print("[\033[91m\033[97m12\033[91m]" + Color.blue + " Clock \t" + Color.red + "\n" + "\n")
     print("[\033[91m\033[97m999\033[91m]" + Color.blue + " Exit \t" + Color.red)
@@ -333,8 +336,7 @@ def VernierCalliperSpeakIntroductionHelp():
         say("""I try to read again""")
     except Exception as e:
         print(Color.red +"Restart This" + Color.white)
-              
-    say(e)
+        print(e)
 def VernierScale(n, m, Multiply, Division, MSR):
     
 
@@ -353,7 +355,7 @@ def OrdinaryVernierScale(n, m, Division, MSR):
     VSR = float(Result * Division)
     Reading_Final = float(MSR + VSR)
     
-    return Reading_Final + Color.magenta
+    return Reading_Final
 def ZeroError(n, m, Division, MSR):
     
     step_1 = float(n - m)
@@ -362,61 +364,62 @@ def ZeroError(n, m, Division, MSR):
     VSR = float(Result * Division)
     Reading_Final = float(MSR + VSR)
     Error_Final = float(Reading_Final - Zero_Error)
-    return Error_Final + Color.yellow
+    return Error_Final
 Intro()
 commands = str(input("[\033[91m\033[97m-\033[91m]" + Color.green + "Select an Option : " + Color.white))
 print("\n")
 if commands == "01": #Zero error
-    N = float(input("Enter the Number of V.S.D => \033[92m"))
     say("Enter the Number of Vernier Scale Division ")
-    M = float(input("Enter The M.S.D : \033[91m"))
+    N = float(input("Enter the Number of V.S.D => \033[92m"))
     say("Enter The Main Scale Division")
-    multiple = float(input("Enter The Difference Value of V.S.D and M.S.D : \033[94m"))
+    M = float(input("Enter The M.S.D : \033[91m"))
     say("Enter The Difference Value of Vernier Scale Division and Main Scale Division")
-    divide = float(input("Enter the Division of your Main Scale : \033[95m"))
+    multiple = float(input("Enter The Difference Value of V.S.D and M.S.D : \033[94m"))
     say("Enter the Division of your Main Scale")
-    msr = float(input("Enter the Main Scale Starter : \033[96m"))
+    divide = float(input("Enter the Division of your Main Scale : \033[95m"))
     say("Enter the Main Scale Starter")
-    Zero_Error = float(input("Enter the After Zero Number : \033[98m"))
+    msr = float(input("Enter the Main Scale Starter : \033[96m"))
     say("Enter the After Zero Number")
+    Zero_Error = float(input("Enter the After Zero Number : \033[98m"))
     Main = VarnierCalliper(N, M, multiple, divide, msr, Zero_Error)
     
-    print(f"Your Result is {Main}")
     say(f"The result is {Main}")
+    print(f"Your Result is {Main}")
 elif commands == "00": #VC --help
     print("Generally, Normal Vernier Calliper is 0.1cm because 1cm/10")
     say("Generally, Normal Vernier Calliper is 0.1cm because 1cm/10")
     say("1 minute I told all VernierScale Detail")
     VernierCalliperSpeakIntroductionHelp()
 elif commands == "02": #VC
-    N = float(input("Enter the Number of V.S.D => \033[92m"))
     say("Enter the Number of Vernier Scale Division ")
-    M = float(input("Enter The M.S.D : \033[91m"))
+    N = float(input("Enter the Number of V.S.D => \033[92m"))
     say("Enter The Main Scale Division")
-    multiple = float(input("Enter The Difference Value of V.S.D and M.S.D : \033[94m"))
+    M = float(input("Enter The M.S.D : \033[91m"))
     say("Enter The Difference Value of Vernier Scale Division and Main Scale Division")
-    divide = float(input("Enter the Division of your Scale : \033[95m"))
+    multiple = float(input("Enter The Difference Value of V.S.D and M.S.D : \033[94m"))
     say("Enter the Division of your Main Scale")
-    msr = float(input("Enter the Main Scale Starter : \033[96m"))
+    divide = float(input("Enter the Division of your Scale : \033[95m"))
     say("Enter the Main Scale Starter")
+    msr = float(input("Enter the Main Scale Starter : \033[96m"))
     Main = VernierScale(N, M, multiple, divide, msr)
     
     print(f"Your Result is {Main}")
     say(f"The result is {Main}")
 
 elif commands == "03": #VernierCalliper
-    N = float(input("Enter the Number of V.S.D => \033[92m"))
     say("Enter the Number of Vernier Scale Division ")
-    M = float(input("Enter The M.S.D : \033[91m"))
+    N = float(input("Enter the Number of V.S.D => \033[92m"))
     say("Enter The Main Scale Division")
-    divide = float(input("Enter the Division of your Scale : \033[95m"))
+    M = float(input("Enter The M.S.D : \033[91m"))
     say("Enter the Division of your Main Scale")
-    msr = float(input("Enter the Main Scale Starter : \033[96m"))
+    divide = float(input("Enter the Division of your Scale : \033[95m"))
     say("Enter the Main Scale Starter")
+    msr = float(input("Enter the Main Scale Starter : \033[96m"))
     Main = OrdinaryVernierScale(N, M, divide, msr)
     
     print(f"Your Result is {Main}")
     say(f"The result is {Main}")
+
 elif commands == "12": #Clock
     def time():
         string = strftime('%H:%M:%S:%p')
@@ -427,13 +430,20 @@ elif commands == "12": #Clock
     label = Label(root, font=("ds-digital", 80), background = "black", foreground = "cyan")
     label.pack(anchor='center')
     time()
+    say(strftime("%H%M%S%p"))
     mainloop()
     print(Color.green + "Completed")
 elif commands == "999":
     say("Exit")
     exit()
+elif commands == "04":
+    print(Color.green)
+    x = list( map( float, input( "X => " + Color.red).split( "," ) ) )
+    y = list( map( float, input( "y => " +Color.cyan).split( "," ) ) )
+    pt.hist( x, color="cyan", ec="green" )
+    pt.xlabel(str(input("name of xlabel => " + Color.cyan)))
+    pt.ylabel(str(input("name of ylabel => " + Color.cyan)))
+    pt.show()
 else:
     print(Color.red + "ErrOr !")
-    say("error")
-    say("error")
     say("error")
