@@ -9,6 +9,7 @@ sudo apt install figlet | lolcat -y
 pip3 install math
 pip3 install requests
 pip install espeak -y
+pip3 install matplotlib
 pip3 install pyttsx3
 pip3 install tkinter
 pip3 install --upgrade pip
