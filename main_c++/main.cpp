@@ -317,7 +317,7 @@ float tau(){
                     Main Function
   -----------------------------------------------------------------  */
 int main(){
-
+    system("cls");
             string command;
 
             cout << "Enter The Command : " << endl;
