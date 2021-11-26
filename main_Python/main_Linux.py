@@ -8,6 +8,7 @@ import pyttsx3
 from tkinter import *
 from time import strftime, time
 from tkinter.ttk import *
+import matplotlib.pyplot as pt
 
 
 #           pyttsx3 initiliaze
@@ -33,6 +34,7 @@ def Intro():
     print("[\033[91m\033[97m01\033[91m]" + Color.blue + " Zero Error \t" + Color.red)
     print("[\033[91m\033[97m02\033[91m]" + Color.blue + " VC \t" + Color.red)
     print("[\033[91m\033[97m03\033[91m]" + Color.blue + " VernierCalliper \t" + Color.red)
+    print("[\033[91m\033[97m04\033[91m]" + Color.blue + " Histogram \t" + Color.red)
     print("[\033[91m\033[97m00\033[91m]" + Color.blue + " Help \t" + Color.red)
     print("[\033[91m\033[97m12\033[91m]" + Color.blue + " Clock \t" + Color.red + "\n" + "\n")
     print("[\033[91m\033[97m999\033[91m]" + Color.blue + " Exit \t" + Color.red)
@@ -333,8 +335,7 @@ def VernierCalliperSpeakIntroductionHelp():
         say("""I try to read again""")
     except Exception as e:
         print(Color.red +"Restart This" + Color.white)
-              
-    say(e)
+        print(e)
 def VernierScale(n, m, Multiply, Division, MSR):
     
 
@@ -430,6 +431,14 @@ elif commands == "12": #Clock
     say(strftime("%H%M%S%p"))
     mainloop()
     print(Color.green + "Completed")
+elif commands == "04":
+    print(Color.green)
+    x = list( map( float, input( "X => " + Color.red).split( "," ) ) )
+    y = list( map( float, input( "y => " +Color.cyan).split( "," ) ) )
+    pt.hist( x, color="cyan", ec="green" )
+    pt.xlabel(str(input("name of xlabel => " + Color.cyan)))
+    pt.ylabel(str(input("name of ylabel => " + Color.cyan)))
+    pt.show()
 elif commands == "999":
     say("Exit")
     exit()
