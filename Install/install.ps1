@@ -9,6 +9,7 @@ pip uninstall typing
 pyinstaller --onefile main_Windows.py
 pip install typing
 python --version
+pip install matplotlib
 g++
 cls
 exit
