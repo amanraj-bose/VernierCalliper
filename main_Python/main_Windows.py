@@ -9,7 +9,7 @@ from tkinter import *
 from time import strftime, time
 from tkinter.ttk import *
 import matplotlib.pyplot as pt
-
+import os
 
 #           pyttsx3 initiliaze
 engine = pyttsx3.init('sapi5')
@@ -18,6 +18,8 @@ engine.setProperty('voice', voices[1].id)
 engine.setProperty('rate', 177)
 
 #   Introduction
+def clean():
+    os.system("cls")
 def Intro():
     Name = """
     
