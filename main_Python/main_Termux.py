@@ -200,7 +200,7 @@ def ascii_histogram(seq) -> None:
     for k in sorted(counted):
         print(f'{k} {"+" * counted[k]}')
         
-    
+clean()
 Intro()
 commands = str(input("[\033[91m\033[97m-\033[91m]" + Color.green + "Select an Option : " + Color.white))
 print("\n")
