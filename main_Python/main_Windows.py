@@ -367,6 +367,7 @@ def ZeroError(n, m, Division, MSR):
     Reading_Final = float(MSR + VSR)
     Error_Final = float(Reading_Final - Zero_Error)
     return Error_Final
+clean()
 Intro()
 commands = str(input("[\033[91m\033[97m-\033[91m]" + Color.green + "Select an Option : " + Color.white))
 print("\n")
