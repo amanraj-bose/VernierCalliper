@@ -61,13 +61,14 @@ string Voice(string Text) {
 }
 int Histogram(){
     int arr[5];
+    system("clear");
     cout << GREEN() << endl;
     cout << "Enter The Value : " << endl;
     for (int i = 0; i <= 5; i++)
     {
         cin >> arr[i];
     }
-    
+    system("clear");
     cout << RED() << endl;
     cout << "S.No \t\tValues\t\tHistogram\n" << endl;
     for (int i = 0; i <= 4; i++)
@@ -148,6 +149,7 @@ float VarnierCalliperError(float n, float m, float Multiply, float Division, flo
     
 
                         //Least Count (L.C)
+    system("clear");
     cout << LIGHT_GREEN() << endl;
     float step_1, Step_2, Result, VSR, Final, Reading;
 
@@ -193,6 +195,7 @@ float OrdinaryVernierCalliperError(float n, float m, float Division, float MSR, 
 
 string VernierCalliperIntroduction_help(){
     string Introduction;
+    system("clear");
     cout << CYAN() << endl;
     Introduction = R"("
                     // INTRODUCTION
@@ -259,12 +262,14 @@ string VernierCalliperIntroduction_help(){
    ----------------------------------------------------------------*/
 
 float ROUNDING(float x, float y) {
+    system("clear");
     cout << YELLOW() << endl;
     float Round;
     Round = x+y;
     return Round;
 }
 float pi(){
+    system("clear");
     cout << CYAN() << endl;
     float Pi;
 
@@ -273,6 +278,7 @@ float pi(){
     return Pi;
 }
 float tau(){
+    system("clear");
     cout << RED() << endl;
     float Tau;
     Tau = 6.283185307179586;
@@ -359,6 +365,7 @@ int main(){
             
             else
             {
+                system("clear");
                 cout << RED() << endl;
                 cout <<setw(5) << "Error" << endl;
                 cout << Voice("Error")<< endl;
