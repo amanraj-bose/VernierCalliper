@@ -59,6 +59,28 @@ string Voice(string Text) {
     const char* charCommand = command.c_str();
     system(charCommand);
 }
+int Histogram(){
+    int arr[5];
+    cout << GREEN() << endl;
+    cout << "Enter The Value : " << endl;
+    for (int i = 0; i <= 5; i++)
+    {
+        cin >> arr[i];
+    }
+    
+    cout << RED() << endl;
+    cout << "S.No \t\tValues\t\tHistogram\n" << endl;
+    for (int i = 0; i <= 4; i++)
+    {
+        cout << i+1 << "\t\t" << arr[i] << "\t\t";
+        for (int j = 1; j <=arr[i]; j++)
+        {
+            cout << "*" ;
+        }
+        cout << "\n";
+        cout<<endl;
+    }
+}
 /*----------------------------------------------------------------
                 Varnier Calliper
   ----------------------------------------------------------------*/
@@ -330,9 +352,9 @@ int main(){
                 cin >> Zero_Error;
                 cout << "Your Varnier Scale count with error is = " << OrdinaryVernierCalliperError(N,M,divide,msr, Zero_Error) << endl;
             }
-            else if (command == "")
+            else if (command == "Histogram")
             {
-                
+                cout << Histogram() << endl;
             }
             
             else
