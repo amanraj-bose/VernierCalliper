@@ -56,13 +56,34 @@ char LIGHT_GREEN() {
 string Voice(string Text) {
     string phrase = Text;
     string command = "espeak -v +f3 \" "+phrase+"\"";
-    const char* charCommand = command.c_str();
+    const char * charCommand = command.c_str();
     system(charCommand);
 }
 /*----------------------------------------------------------------
                 Varnier Calliper
   ----------------------------------------------------------------*/
-  
+int Histogram(){
+    int arr[5];
+    cout << GREEN() << endl;
+    cout << "Enter The Value : " << endl;
+    for (int i = 0; i <= 5; i++)
+    {
+        cin >> arr[i];
+    }
+    
+    cout << RED() << endl;
+    cout << "S.No \t\tValues\t\tHistogram\n" << endl;
+    for (int i = 0; i <= 4; i++)
+    {
+        cout << i+1 << "\t\t" << arr[i] << "\t\t";
+        for (int j = 1; j <=arr[i]; j++)
+        {
+            cout << "*" ;
+        }
+        cout << "\n";
+        cout<<endl;
+    }
+}
 float VarnierCalliperError(float n, float m, float Multiply, float Division, float MSR, float Zero_Error){
     /*
                 // INTRODUCTION
@@ -154,6 +175,7 @@ float VarnierCalliperError(float n, float m, float Multiply, float Division, flo
     
 
                         //Least Count (L.C)
+ 
     cout << LIGHT_GREEN() << endl;
     float step_1, Step_2, Result, VSR, Final, Reading;
 
@@ -288,6 +310,67 @@ string VernierCalliperIntroduction_help(){
 
     return Introduction;
 }
+
+/*-----------------------------------------------------------------
+                        ERROR ANAYLISIS
+  ------------------------------------------------------------------*/
+  float Error_Anaylysis(float x , float y , float z, float a, float b) {
+    float Step_1,Step_2,Step_3, Step_4, X, Y, Z, A, B;
+    Step_1 = x + y + z + a + b /5;
+    X = x - Step_1;
+    Y = y - Step_1;
+    Z = z - Step_1;
+    A = a - Step_1;
+    B = b - Step_1;
+    Step_2 = X + Y + Z + A + B / 5;
+    Step_3 = Step_2/Step_1;
+    Step_4 = 100 / Step_3; 
+
+    return Step_4 ;
+}
+float Error_Analysis4(float x , float y , float z, float a){
+
+    float Step_1,Step_2,Step_3, Step_4, X, Y, Z, A;
+    Step_1 = x + y + z + a /4;
+    X = x - Step_1;
+    Y = y - Step_1;
+    Z = z - Step_1;
+    A = a - Step_1;
+    Step_2 = X + Y + Z + A / 4;
+    Step_3 = Step_2/Step_1;
+    Step_4 = Step_3 * 100;
+}
+float Error_Analysis3(float x , float y , float z){
+
+    float Step_1,Step_2,Step_3, Step_4, X, Y, Z;
+    Step_1 = x + y + z /3;
+    X = x - Step_1;
+    Y = y - Step_1;
+    Z = z - Step_1;
+    Step_2 = X + Y + Z / 3;
+    Step_3 = Step_2/Step_1;
+    Step_4 = Step_3 * 100;
+}
+float Error_Analysis2(float x , float y){
+
+    float Step_1,Step_2,Step_3, Step_4, X, Y;
+    Step_1 = x + y /2;
+    X = x - Step_1;
+    Y = y - Step_1;
+    Step_2 = X + Y / 3;
+    Step_3 = Step_2/Step_1;
+    Step_4 = Step_3 * 100;
+}
+float Error_Analysis1(float x){
+
+    float Step_1,Step_2,Step_3, Step_4, X;
+    Step_1 = x /2;
+    X = x - Step_1;
+    Step_2 = X / 3;
+    Step_3 = Step_2/Step_1;
+    Step_4 = Step_3 * 100;
+}
+
 /* ----------------------------------------------------------------
                  ROUNDING Any Number
    ----------------------------------------------------------------*/
@@ -318,6 +401,7 @@ float tau(){
   -----------------------------------------------------------------  */
 int main(){
     system("cls");
+
             string command;
 
             cout << "Enter The Command : " << endl;
@@ -386,9 +470,9 @@ int main(){
                 cin >> Zero_Error;
                 cout << "Your Varnier Scale count with error is = " << OrdinaryVernierCalliperError(N,M,divide,msr, Zero_Error) << endl;
             }
-            else if (command == "")
+            else if (command == "Histogram")
             {
-                
+                cout << Histogram() << endl;
             }
             
             else
