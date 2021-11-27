@@ -62,15 +62,17 @@ string Voice(string Text) {
 /*----------------------------------------------------------------
                 Varnier Calliper
   ----------------------------------------------------------------*/
+
 int Histogram(){
     int arr[5];
+    system("cls");
     cout << GREEN() << endl;
     cout << "Enter The Value : " << endl;
     for (int i = 0; i <= 5; i++)
     {
         cin >> arr[i];
     }
-    
+    system("cls");
     cout << RED() << endl;
     cout << "S.No \t\tValues\t\tHistogram\n" << endl;
     for (int i = 0; i <= 4; i++)
@@ -176,6 +178,7 @@ float VarnierCalliperError(float n, float m, float Multiply, float Division, flo
 
                         //Least Count (L.C)
  
+    system("cls");
     cout << LIGHT_GREEN() << endl;
     float step_1, Step_2, Result, VSR, Final, Reading;
 
@@ -221,6 +224,7 @@ float OrdinaryVernierCalliperError(float n, float m, float Division, float MSR, 
 
 string VernierCalliperIntroduction_help(){
     string Introduction;
+    system("cls");
     cout << CYAN() << endl;
     Introduction = R"("
                     // INTRODUCTION
@@ -376,12 +380,14 @@ float Error_Analysis1(float x){
    ----------------------------------------------------------------*/
 
 float ROUNDING(float x, float y) {
+    system("cls");
     cout << YELLOW() << endl;
     float Round;
     Round = x+y;
     return Round;
 }
 float pi(){
+    system("cls");
     cout << CYAN() << endl;
     float Pi;
 
@@ -390,6 +396,7 @@ float pi(){
     return Pi;
 }
 float tau(){
+    system("cls");
     cout << RED() << endl;
     float Tau;
     Tau = 6.283185307179586;
@@ -401,7 +408,16 @@ float tau(){
   -----------------------------------------------------------------  */
 int main(){
     system("cls");
-
+    cout << BLUE() << endl;
+    system("cls");
+    cout << R"(
+     __     __              _              ____      _ _ _
+     \ \   / /__ _ __ _ __ (_) ___ _ __   / ___|__ _| | (_)_ __   ___ _ __
+      \ \ / / _ \ '__| '_ \| |/ _ \ '__| | |   / _` | | | | '_ \ / _ \ '__|
+       \ V /  __/ |  | | | | |  __/ |    | |__| (_| | | | | |_) |  __/ |
+        \_/ \___|_|  |_| |_|_|\___|_|     \____\__,_|_|_|_| .__/ \___|_|
+                                                          |_|
+        )" << endl;
             string command;
 
             cout << "Enter The Command : " << endl;
@@ -474,9 +490,24 @@ int main(){
             {
                 cout << Histogram() << endl;
             }
-            
+            else if (command == "commands"){
+                system("cls");
+                cout << GREEN() << endl;
+                string commands = R"(
+                
+                __*____________________________________________*__
+
+                1. VC
+                2. VC --help
+                3. VernierCalliper
+                4. VernierCalliperError
+                5. Histogram
+                )";
+                cout << commands << "\n\n"<<endl;
+            }
             else
             {
+                system("cls");
                 cout << RED() << endl;
                 cout <<setw(5) << "Error" << endl;
                 cout << Voice("Error")<< endl;
