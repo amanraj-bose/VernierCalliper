@@ -51,9 +51,7 @@ class Color:
 class Other:
     """
     For Other thing in A.K.A mathmetics
-
     pi,Lcm,Hcf, Etc...
-
     """
     print(Color.cyan)
     Pi = "The Pi value is : ", math.pi
@@ -63,84 +61,51 @@ def clean():
 
     """
                                 // INTRODUCTION
-
     To measure length of an object we use normal scale which is amrked in cm/mm
     Smallest Measurement which can be made = 0.1cm  --> Least Count (L.C)
     It Cannot give Precision Upto Second Descimal Place...
-
     In 1631, Pierre Varnier deviced .........!!
-
     (1). To Measure length,Breadth and Height of Small regular size Object's.
     (2). To measure Diameter (or Radius) of Small Spherical or cylindric Body.
     (3). To measure depth of Beaker,Glass etc....
     (4). To measure internal Diameter of hollow Cylinder.
-
     Generally, each of the division of vernier scale smaller than main scale (M.S).
     * Smallest measurement which can be made --> Least Count (L.C)
-
-
     * L.C = 1 M.S.D (Main Scale Division) - 1 V.S.D (Varnier Scale Division)
-
     let, 'n' V.S.D are equal to 'm' M.S.D ...
-
     * 1 V.S.D = m/n M.S.D
-
     * L.C = 1 M.S.D - 1 V.S.D = 1 M.S.D - m/n M.S.D
-
     * Formula:-
                 L.C = MSD(1-m/n) --> Number of MSD which are equal to Number of VSD
-
     Ordinary Varnier Calliper :-
-
         1 M.S.D = 1cm/10 = 0.1cm
         10V.S.D = 9 M.S.D --> Remember Main
-
     Example :-
-
                 V.S.D = M.S.D
                 10 V.S.D = 9 M.S.D
-
                 = 0.1cm(1-9/10)
                 = 0.1 × 1 / 10
                 = 0.01 cm
-
-
     #         // Reading of Varnier Calliper
-
     * 1 cm of M.S.D is Divided in 10 divisions
     10 V.S.D = 9 M.S.D
     L.C = 0.01cm
     Total Reading =  M.S.R (Main Scale Reading) + V.S.R (Varnier Scale Reading)
-
     * M.S.R = Reading on M.S just before Zero of V.S = 1cm.
     * V.S.R = L.C multiplied by Co-inciding division of V.S.
-
     =           1cm + 0.01cm × 5 = 1.05cm
-
     * 5 × L.C
-
     * Free From Zero Error
-
     *   V.S.D < M.S.D
-
-
     #                // Zerro Error
-
     When Zero of V.S & zero of M.S don't Co-inside, the instrumentis said to have a zero error.
-
     *                       ZERO ERROR -----> (i) +ve Zero Error (ii) -ve Zero Error
-
     * Correct Reading = Total Reading - Zero Error
-
     // Positive Zero Error :-
-
     * Positive Zero Error : Zero of V.S is on right of ZERO of M.S .
     * +VE Zero Error = Least Count × Coincidance div. of V.S .
-
-
     EXAMPLE : 0.01 × 5 = +0.05cm
               Total Reading - Zero Error
-
     """
     # M.S.D
 
@@ -223,6 +188,14 @@ elif commands == "02": #VC
     divide = float(input("Enter the Division of your Scale : \033[95m"))
     msr = float(input("Enter the Main Scale Starter : \033[96m"))
     Main = VernierScale(N, M, multiple, divide, msr)
+    
+    print(f"Your Result is {Main}")
+elif commands == "03":
+    N = float(input("Enter the Number of V.S.D => \033[92m"))
+    M = float(input("Enter The M.S.D : \033[91m"))
+    divide = float(input("Enter the Division of your Scale : \033[95m"))
+    msr = float(input("Enter the Main Scale Starter : \033[96m"))
+    Main = OrdinaryVernierScale(N, M, divide, msr)
     
     print(f"Your Result is {Main}")
 elif commands == "04":
