@@ -31,6 +31,7 @@ def Intro():
     print("[\033[91m\033[97m02\033[91m]" + Color.blue + " VC \t" + Color.red)
     print("[\033[91m\033[97m03\033[91m]" + Color.blue + " VernierCalliper \t" + Color.red)
     print("[\033[91m\033[97m04\033[91m]" + Color.blue + " Histogram \t" + Color.red)
+    print("[\033[91m\033[97m05\033[91m]" + Color.red + " Sytem Info \t" + Color.red)
     print("[\033[91m\033[97m00\033[91m]" + Color.blue + " Help \t" + Color.red)
     print("[\033[91m\033[97m999\033[91m]" + Color.blue + " Exit \t" + Color.red)
     print(Color.white)
