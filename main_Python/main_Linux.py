@@ -29,14 +29,16 @@ def Intro():
         \_/ \___|_|  |_| |_|_|\___|_|     \____\__,_|_|_|_| .__/ \___|_|
                                                           |_|
 """
-    print(Color.green + Name)
-
+    print(Color.green + Name + "\t\t\t\t", "System Version")
+    print(Color.cyan)
+    print("\t\t\t\t\t","Operating System : \033[95m", platform.system(), "\n\n")
     print("[\033[92m\033[97m•\033[92m]", Color.cyan + "Tool Created by AmanRaj-Bose (Aman Raj)" + Color.red)
     print("[\033[91m\033[97m::\033[91m]" + Color.yellow + " For Calculating Vernier Scale Measurement "+ Color.red + "[\033[91m\033[97m::\033[91m]" + "\n")
     print("[\033[91m\033[97m01\033[91m]" + Color.blue + " Zero Error \t" + Color.red)
     print("[\033[91m\033[97m02\033[91m]" + Color.blue + " VC \t" + Color.red)
     print("[\033[91m\033[97m03\033[91m]" + Color.blue + " VernierCalliper \t" + Color.red)
     print("[\033[91m\033[97m04\033[91m]" + Color.blue + " Histogram \t" + Color.red)
+    print("[\033[91m\033[97m05\033[91m]" + Color.red + " Sytem Info \t" + Color.red)
     print("[\033[91m\033[97m00\033[91m]" + Color.blue + " Help \t" + Color.red)
     print("[\033[91m\033[97m12\033[91m]" + Color.blue + " Clock \t" + Color.red + "\n" + "\n")
     print("[\033[91m\033[97m999\033[91m]" + Color.blue + " Exit \t" + Color.red)
@@ -442,11 +444,21 @@ elif commands == "04":
     pt.xlabel(str(input("name of xlabel => " + Color.cyan)))
     pt.ylabel(str(input("name of ylabel => " + Color.cyan)))
     pt.show()
+elif commands == "05":
+    print(Color.cyan)
+    print("\nOperating System\033[95m :", platform.system())
+    print("\033[96mMachine \033[95m :",platform.machine())
+    print("\033[96mSystem Name \033[95m :",platform.node())
+    print("\033[96mVersion \033[95m :", platform.version())
+    print("\033[96mRelease \033[95m :", platform.release())
+    print("\033[96mProcessor \033[95m :", platform.processor())
+    Bite = platform.architecture()
+    print("\033[96mSystem Bit \033[95m : ",Bite[0])
+    
+    print(Color.white)
 elif commands == "999":
     say("Exit")
     exit()
 else:
     print(Color.red + "ErrOr !")
-    say("error")
-    say("error")
     say("error")
