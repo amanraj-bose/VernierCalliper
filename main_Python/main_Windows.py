@@ -10,7 +10,7 @@ from time import strftime, time
 from tkinter.ttk import *
 import matplotlib.pyplot as pt
 import os
-
+import platform
 #           pyttsx3 initiliaze
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -18,8 +18,6 @@ engine.setProperty('voice', voices[1].id)
 engine.setProperty('rate', 177)
 
 #   Introduction
-def clean():
-    os.system("cls")
 def Intro():
     Name = """
     
@@ -29,9 +27,11 @@ def Intro():
        \ V /  __/ |  | | | | |  __/ |    | |__| (_| | | | | |_) |  __/ |
         \_/ \___|_|  |_| |_|_|\___|_|     \____\__,_|_|_|_| .__/ \___|_|
                                                           |_|
-"""
-    print(Color.green + Name)
+    \n\n\t\t"""
 
+    print(Color.green + Name + "\t\t\t\t", "System Version")
+    print(Color.cyan)
+    print("\t\t\t\t\t","Operating System : \033[95m", platform.system(), "\n\n")
     print("[\033[92m\033[97m•\033[92m]", Color.cyan + "Tool Created by AmanRaj-Bose (Aman Raj)" + Color.red)
     print("[\033[91m\033[97m::\033[91m]" + Color.yellow + " For Calculating Vernier Scale Measurement "+ Color.red + "[\033[91m\033[97m::\033[91m]" + "\n")
     print("[\033[91m\033[97m01\033[91m]" + Color.blue + " Zero Error \t" + Color.red)
@@ -39,6 +39,7 @@ def Intro():
     print("[\033[91m\033[97m03\033[91m]" + Color.blue + " VernierCalliper \t" + Color.red)
     print("[\033[91m\033[97m04\033[91m]" + Color.blue + " Histogram \t" + Color.red)
     print("[\033[91m\033[97m00\033[91m]" + Color.blue + " Help \t" + Color.red)
+    print("[\033[91m\033[97m05\033[91m]" + Color.red + " Sytem Info \t" + Color.red)
     print("[\033[91m\033[97m12\033[91m]" + Color.blue + " Clock \t" + Color.red + "\n" + "\n")
     print("[\033[91m\033[97m999\033[91m]" + Color.blue + " Exit \t" + Color.red)
     print(Color.white)
@@ -74,6 +75,8 @@ class Web:
     def Math(self):
         self.url = requests.get("")
         pass
+def clean():
+    os.system("cls")
 def say(text): 
     engine.say(text)
     engine.runAndWait()
@@ -439,6 +442,18 @@ elif commands == "12": #Clock
 elif commands == "999":
     say("Exit")
     exit()
+elif commands == "05":
+    print(Color.cyan)
+    print("\nOperating System\033[95m :", platform.system())
+    print("\033[96mMachine \033[95m :",platform.machine())
+    print("\033[96mSystem Name \033[95m :",platform.node())
+    print("\033[96mVersion \033[95m :", platform.version())
+    print("\033[96mRelease \033[95m :", platform.release())
+    print("\033[96mProcessor \033[95m :", platform.processor())
+    Bite = platform.architecture()
+    print("\033[96mSystem Bit \033[95m : ",Bite[0])
+    
+    print(Color.white)
 elif commands == "04":
     print(Color.green)
     x = list( map( float, input( "X => " + Color.red).split( "," ) ) )
