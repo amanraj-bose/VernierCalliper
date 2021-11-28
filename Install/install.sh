@@ -6,6 +6,7 @@ sudo apt install clang -y
 sudo apt install python3 -y
 sudo apt install figlet -y
 sudo apt install figlet | lolcat -y
+pip3 install platform
 pip3 install math
 pip3 install requests
 pip install espeak -y
