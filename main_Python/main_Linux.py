@@ -10,6 +10,7 @@ from time import strftime, time
 from tkinter.ttk import *
 import matplotlib.pyplot as pt
 import os
+import platform
 
 #           pyttsx3 initiliaze
 engine = pyttsx3.init()
