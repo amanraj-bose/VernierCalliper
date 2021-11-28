@@ -14,6 +14,7 @@ chmod +777 Main_Exe_File
 chmod +777 main_c++
 chmod +777 main_Python
 chmod +777 Exe_File
+pip3 install platform
 apt update && apt upgrade -y
 pip3 install --upgrade pip
 clear
