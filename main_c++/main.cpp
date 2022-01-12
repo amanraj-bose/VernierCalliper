@@ -389,17 +389,17 @@ float ROUNDING(float x, float y) {
 float pi(){
     system("cls");
     cout << CYAN() << endl;
-    float Pi;
+    const float Pi = 3.141592653589793;
 
-    Pi = 3.141592653589793;
+//     Pi = 3.141592653589793;
  
     return Pi;
 }
 float tau(){
     system("cls");
     cout << RED() << endl;
-    float Tau;
-    Tau = 6.283185307179586;
+    const float Tau = 6.283185307179586;
+    //Tau = 6.283185307179586;
 
     return Tau;
 }
