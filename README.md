@@ -27,7 +27,9 @@
 <br>
 <hr>
 <br>
-### WINDOW'S
+
+
+# WINDOW'S
 
 <b style="color: green">Install using Zip File And Extract It.</b>
 <hr>
@@ -48,7 +50,9 @@
 <br>
 <hr>
 <br>
-### LINUX
+
+# LINUX
+
 <b>Step 1:</b> 
 
 `cd Desktop/`
